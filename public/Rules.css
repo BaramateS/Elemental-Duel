@@ -1,0 +1,136 @@
+/* Eng Font */
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+/* Thai Font */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive;
+}
+
+.nav-bar {
+    background: #C4B454;
+    width: 100vw;
+    height: 50px;
+    /* justify-content: space-between; */
+}
+
+.nav-bar .logo {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.nav-bar .logo .nav-bar-brand {
+    color: #2B1C32;
+    text-decoration: none;
+    font-family: 'Alkatra', cursive;
+}
+
+.logo, .logout-zone {
+    position: absolute;
+}
+
+.logout-zone {
+    right: 0px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+#user-profile-name {
+    color: #2B1C32;
+    margin: 0 10px 0;
+}
+
+#btnLogout {
+    color: #2B1C32;
+    border: solid #2B1C32 3px;
+    font-family: 'Alkatra', cursive;
+}
+
+#btnLogout:hover {
+    background: #2B1C32;
+    color: #C4B454;
+    border: solid #FFFFFF 3px;
+}
+
+#btnLogout i {
+    color:#2B1C32;
+}
+
+#btnLogout:hover i {
+    color: #C4B454;
+}
+
+body {
+    background-color: #2B1C32;
+}
+
+#heading{
+    font-size: 56px;
+    font-weight: 500;
+    text-align: center;
+    color: #C4B454;
+    font-family: 'Alkatra', cursive;
+}
+
+.container {
+    display: flex;
+    width: 100vh;
+}
+
+.back-to-mainmenu {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #2B1C32;
+    border: solid #FFD936 3px;
+    color: #C4B454;
+    font-family: 'Alkatra', cursive;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    left: 50%;
+    top: 10px;
+}
+
+.back-to-mainmenu:hover {
+    background-color: #FFD936;
+    border: solid #FFFFFF 2px;
+    color: #000000;
+}
+
+.card {
+    background: none;
+    border: none;
+    /* font-family: 'Chakra Petch', sans-serif; */
+}
+
+.card-title{
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.card-text{
+    font-size: 16px;
+}
+
+.card-body {
+    background-color: #2B1C32;
+    border: solid #FFD936 3px;
+    border-radius: 10px;
+    color: white;
+}
+
+.card-body p {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+

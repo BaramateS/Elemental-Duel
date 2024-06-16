@@ -1,0 +1,399 @@
+/* Eng Font */
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+/* Thai Font */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive;
+    color: #C4B454;
+}
+
+.navbar {
+    position: static;
+    background: #C4B454;
+    width: 100vw;
+    height: 50px;
+    /* justify-content:center; */
+}
+
+.navbar .logo {
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.navbar .logo .navbar-brand {
+    color: #000000;
+}
+
+body {
+    background-color: #2B1C32;
+    overflow-x: hidden;
+}
+
+.logo, .logout-zone {
+    position: absolute;
+}
+
+.logout-zone {
+    right: 0px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+#user-profile-name {
+    color: #2B1C32;
+    margin: 0 10px 0;
+}
+
+#btnLogout {
+    color: #2B1C32;
+    border: solid #2B1C32 3px;
+}
+
+#btnLogout:hover {
+    background: #2B1C32;
+    color: #C4B454;
+    border: solid #FFFFFF 3px;
+}
+
+#btnLogout i {
+    color:#2B1C32;
+}
+
+#btnLogout:hover i {
+    color: #C4B454;
+}
+
+/* .card-area-enemy {
+    padding-top: 40px;
+    height: 140px;
+    display: grid;
+    grid-template-columns: repeat(4, 90px);
+    grid-gap: 30px;
+    justify-content: center;
+} */
+
+.container-show-player-info, .container-show-player-score-and-turn {
+    font-size: 1vw;
+}
+
+.container-show-player-info {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-show-player-score-and-turn {
+    display: flex;
+    justify-content: center;
+}
+
+.card-area-player {
+    margin-top: 40px;
+    height: 140px;
+    display: grid;
+    grid-template-columns: repeat(5, 90px);
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+/* .enemy-card {
+    width: 75px;
+    height: 95px;
+    background: #a29754;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 5px;
+    border: solid #6a5b05 5px;
+}
+
+.enemy-card i {
+    color: #2B1C32;
+} */
+
+.player-card {
+    width: 75px;
+    height: 95px;
+    border: solid #a29754 5px;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.player-card:hover {
+    background: #C4B454;
+    cursor: pointer;
+    transition: 0.15s;
+    box-shadow: 0 0 5px 5px #C4B454;
+}
+
+.player-card:hover i {
+    color: #2B1C32;
+}
+
+/* .deck-zone {
+    height: 140px;
+    display: grid;
+    grid-template-columns: repeat(1, 90px);
+    grid-gap: 30px;
+    justify-content: center;
+} */
+
+.deck {
+    width: 75px;
+    height: 95px;
+    background: #a29754;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 5px;
+    border: solid #6a5b05 5px;
+}
+
+.deck i {
+    color: #2B1C32;
+}
+
+/* img {
+    width: 100px;
+    height: 100px;
+} */
+
+/* .select-hydro {
+    box-shadow: 0 0 10px 10px cyan;
+} */
+
+.container {
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+}
+
+.container .display-player1 {
+    width: max-content;
+    /* padding-left: 75vw; */
+    text-align: center;
+}
+
+.container .display-player2 {
+    width: max-content;
+    /* padding-left: 75vw; */
+    text-align: center;
+}
+
+table {
+    display: flex;
+    /* margin: auto; */
+    justify-content: center;
+}
+
+.table-block {
+    width: 100px;
+    height: 100px;
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 50px;
+    border-right: solid #C4B454 3px;
+    border-bottom: solid #C4B454 3px;
+    text-align: center;
+}
+
+.table-block:nth-child(4n) {
+    border-right: none;
+}
+
+tr:nth-child(4n) td {
+    border-bottom: none;
+}
+
+.pop-up {
+    display: none;
+    border: #C4B454 solid 5px;
+    border-radius: 10px;
+    background: #2B1C32;
+    width: 35vw;
+    height: 15vw;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 42vh;
+    left: 32.5vw;
+}
+
+.pop-up h1 {
+    font-size: 1.5vw;
+    flex-wrap: 100%;
+}
+
+#run-game {
+    display: initial;
+}
+
+#result-game {
+    display: none;
+}
+
+.content {
+    color: #C4B454;
+    width: 100vw;
+    margin: 150px 0 0;
+}
+
+.content h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #C4B454;
+}
+
+.content p {
+    font-size: 25px;
+    text-align: center;
+    color: #C4B454;
+}
+
+.card-section {
+    margin: 40px 0 0;
+    height: 110px;
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.btn-section {
+    text-align: center;
+}
+
+.btn-menu{
+    width: 300px;
+    color: #C4B454;
+    border: solid #C4B454 3px;
+    font-size: 25px;
+}
+
+
+.btn-menu:hover {
+    background: #C4B454;
+}
+/* Mobile Screen */
+@media screen and (max-width: 480px) {
+    
+    .card-area-enemy {
+        /* width: 100px; */
+        height: 170px;
+        grid-template-columns: repeat(4, 70px);
+        grid-gap: 30px;
+    }
+    
+    .card-area-player {
+        /* width: 100px; */
+        height: 170px;
+        grid-template-columns: repeat(4, 70px);
+        grid-gap: 30px;
+    }
+
+    .table-block {
+        width: 100px;
+        height: 100px;
+    }
+
+    .enemy-card {
+        width: 75px;
+        height: 95px;
+        
+    }
+    
+    .player-card {
+        width: 75px;
+        height: 95px;      
+    }
+}
+
+#hydro{
+    color: rgb(41, 66, 255);
+    font-size:4rem;
+}
+#pyro{
+    color: red;
+    font-size:4rem;
+}
+#dendro{
+    color: green;
+    font-size:4rem;
+}
+#animo{
+    color: yellow;
+    font-size:3.5rem;
+}
+
+#elemental1{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+#elemental2{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+#elemental3{
+    display: none;
+    visibility: hidden;
+}
+.table-block{
+    min-width: 100px;
+}
+
+@media (max-width: 1024px) and (min-width: 481px) {
+
+#elemental1{
+    width: 100%;
+    max-width: 400px;
+    min-width:200px;
+    height: auto;
+}
+#elemental2{
+    width: 100%;
+    max-width: 400px;
+    min-width:200px;
+    height: auto;
+}
+.table-block{
+    min-width: 75px;
+}
+    }
+@media (max-width: 480px) {
+
+#elemental1{
+    display: none;
+    visibility: hidden;
+}
+#elemental2{
+    display: none;
+    visibility: hidden;
+}
+#elemental3{
+    display: block;
+    visibility: visible;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    /* left:50px; */
+}
+#circle{
+    /* display: flex;
+    flex-wrap: wrap; */
+    align-content: center;
+
+}
+.deck{
+    display: none;
+    visibility: hidden;
+}
+
+}

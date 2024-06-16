@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="game_style.css">
+    <title>Elemental Duel | Multiplayer</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a class="navbar-brand">Elemental Duel</a>
+        </div>
+        <div class="logout-zone">
+            <span class="logged-in">
+                <span id="user-profile-name" class="display-name"></span>
+            </span>
+            <button type="button" id="btnLogout" class="btn btn-outline-light logged-in">
+                <i class="bi bi-box-arrow-right"></i> Logout
+            </button>
+        </div>
+    </nav>
+    <!-- <div class="card-area-enemy">
+        <div class="enemy-card"><i class="bi bi-octagon-fill"></i></div>
+        <div class="enemy-card"><i class="bi bi-octagon-fill"></i></div>
+        <div class="enemy-card"><i class="bi bi-octagon-fill"></i></div>
+        <div class="enemy-card"><i class="bi bi-octagon-fill"></i></div>
+    </div> -->
+    <div id="run-game">
+        <div class="container-show-player-info">
+            <h1 class="display-player1">Player 1</h1>
+            <h1>&emsp;VS&emsp;</h1>
+            <h1 class="display-player2">Player 2</h1>
+        </div>
+        <!-- <div class="container-show-player-score-and-turn">
+            <h1 class="score-player1">Score</h1>
+            <h1>&emsp;:&emsp;</h1>
+            <h1 class="score-player2">Score</h1>
+        </div> -->
+        <div class="container-show-player-score-and-turn">
+            <h1>Turn&emsp;:&emsp;</h1>
+            <h1 id="turn-show">turnshow</h1>
+        </div>
+        <div class="circle">
+            <picture>
+                <img id="elemental3" src="Elemental1.jpg">
+            </picture>
+        </div>
+        <div class="container">
+            <div>
+                <picture>
+                    <img id="elemental1" src="Elemental.jpg">
+                </picture>
+            </div>
+            <table>
+                <tr>
+                    <td id="field-01" class="table-block"></td>
+                    <td id="field-02" class="table-block"></td>
+                    <td id="field-03" class="table-block"></td>
+                    <td id="field-04" class="table-block"></td>
+                </tr>
+                <tr>
+                    <td id="field-05" class="table-block"></td>
+                    <td id="field-06" class="table-block"></td>
+                    <td id="field-07" class="table-block"></td>
+                    <td id="field-08" class="table-block"></td>
+                </tr>
+                <tr>
+                    <td id="field-09" class="table-block"></td>
+                    <td id="field-10" class="table-block"></td>
+                    <td id="field-11" class="table-block"></td>
+                    <td id="field-12" class="table-block"></td>
+                </tr>
+                <tr>
+                    <td id="field-13" class="table-block"></td>
+                    <td id="field-14" class="table-block"></td>
+                    <td id="field-15" class="table-block"></td>
+                    <td id="field-16" class="table-block"></td>
+                </tr>
+            </table>
+            <div>
+                <picture>
+                    <img id="elemental2" src="Elemental.jpg">
+                </picture>
+            </div>
+        </div>
+
+        <div class="card-area-player">
+            <div class="player-card "><i id="hydro" class="bi bi-droplet-fill"></i></div>
+            <div class="player-card "><i id="pyro" class="bi bi-fire"></i></div>
+            <div class="player-card "><i id="dendro" class="bi bi-tree-fill"></i></div>
+            <div class="player-card "><i id="animo" class="bi bi-tropical-storm"></i></div>
+            <!-- <div class="player-card card1"></div>
+            <div class="player-card card2"></div>
+            <div class="player-card card3"></div>
+            <div class="player-card card4"></div> -->
+            <div class="deck">
+                <i class="bi bi-octagon-fill"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="draw-pop" class="pop-up">
+        <h1>Draw</h1>
+    </div>
+
+    <div id="result-game">
+        <div class="content">
+            <div class="card-section">
+                <div class="player-card "><i id="hydro" class="bi bi-droplet-fill"></i></div>
+                <div class="player-card "><i id="pyro" class="bi bi-fire"></i></div>
+                <div class="player-card "><i id="dendro" class="bi bi-tree-fill"></i></div>
+                <div class="player-card "><i id="animo" class="bi bi-tropical-storm"></i></div>
+            </div>
+            <br>
+            <h1 id="result-win-lose">VICTORY</h1>
+            <h1>Score&emsp;:&emsp;+100</h1>
+        </div>
+        <div class="btn-result-section">
+            <br>
+            <div class="btn-section">
+                <button type="button" id="btnToMenu" class="btn btn-outline-light btn-menu">
+                    Back to Menu
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="win-pop" class="pop-up">
+        <h1>WINNER IS</h1>
+        <br>
+        <h1 id="winner-name"></h1>
+    </div> -->
+    <!-- <div class="deck-zone">
+        <div class="deck">
+            <i class="bi bi-octagon-fill"></i>
+        </div>
+    </div> -->
+</body>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyB5a5TFN64HLdrEHh3K92ubr4V0DUOcsbI",
+        authDomain: "elemental-duel.firebaseapp.com",
+        databaseURL: "https://elemental-duel-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "elemental-duel",
+        storageBucket: "elemental-duel.appspot.com",
+        messagingSenderId: "1085662179323",
+        appId: "1:1085662179323:web:7cc30598bcdfabe55f255e",
+        measurementId: "G-W74XTXZTE7"
+    };
+    firebase.initializeApp(firebaseConfig)
+</script>
+<!-- <script src="single_mode.js"></script> -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="game_control.js"></script>
+<script src="auth.js"></script>
+<script src="insert_data.js"></script>
+<script src="read_data.js"></script>
+
+</html>

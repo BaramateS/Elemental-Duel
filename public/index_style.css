@@ -1,0 +1,153 @@
+/* Eng Font */
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+/* Thai Font */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive;
+    color: #FFF;
+}
+
+.nav-bar {
+    background: #C4B454;
+    width: 100vw;
+    height: 50px;
+    /* justify-content:center; */
+}
+
+.nav-bar .logo {
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.nav-bar .logo .nav-bar-brand {
+    color: #000000;
+    text-decoration: none;
+}
+
+.logo, .logout-zone {
+    position: absolute;
+}
+
+.logout-zone {
+    right: 0px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+#user-profile-name {
+    color: #2B1C32;
+    margin: 0 10px 0;
+}
+
+#btnLogout {
+    color: #2B1C32;
+    border: solid #2B1C32 3px;
+}
+
+#btnLogout:hover {
+    background: #2B1C32;
+    color: #C4B454;
+    border: solid #FFFFFF 3px;
+}
+
+#btnLogout i {
+    color:#2B1C32;
+}
+
+#btnLogout:hover i {
+    color: #C4B454;
+}
+
+body {
+    background-color: #2B1C32;
+}
+
+.content {
+    color: #C4B454;
+    width: 100vw;
+    margin: 105px 0 0;
+}
+
+.content h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #C4B454;
+}
+
+.content p {
+    font-size: 25px;
+    text-align: center;
+    color: #C4B454;
+}
+
+.card-section {
+    margin: 40px 0 0;
+    height: 110px;
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.player-card {
+    width: 75px;
+    height: 95px;
+    border: solid #a29754 5px;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.player-card i {
+    color: #C4B454;
+}
+
+.btn-section {
+    text-align: center;
+}
+
+.btn-login{
+    width: 150px;
+    color: #C4B454;
+    border: solid #C4B454 3px;
+}
+
+.btn-signup{
+    width: 150px;
+    color: #C4B454;
+    border: solid #C4B454 3px;
+}
+
+.btn-login:hover {
+    background: #C4B454;
+}
+
+.btn-signup:hover {
+    background: #C4B454;
+}
+
+#hydro{
+    color: rgb(41, 66, 255);
+    font-size:4rem;
+}
+#pyro{
+    color: red;
+    font-size:4rem;
+}
+#dendro{
+    color: green;
+    font-size:4rem;
+}
+#animo{
+    color: yellow;
+    font-size:3.5rem;
+}
+
+/* @media screen and (max-width: 480px) {
+
+} */

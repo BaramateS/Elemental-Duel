@@ -1,0 +1,253 @@
+/* Eng Font */
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+/* Thai Font */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive;
+    color: #FFF;
+}
+
+.nav-bar {
+    background: #C4B454;
+    width: 100vw;
+    height: 50px;
+    /* justify-content: space-between; */
+}
+
+.nav-bar .logo {
+    margin-top: 5px;
+    margin-left:25px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.nav-bar .logo .nav-bar-brand {
+    color: #2B1C32;
+    text-decoration: none;
+}
+
+.logo, .logout-zone {
+    position: absolute;
+}
+
+.logout-zone {
+    right: 0px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+#user-profile-name {
+    color: #2B1C32;
+    margin: 0 10px 0;
+}
+
+#btnLogout {
+    color: #2B1C32;
+    border: solid #2B1C32 3px;
+}
+
+#btnLogout:hover {
+    background: #2B1C32;
+    color: #C4B454;
+    border: solid #FFFFFF 3px;
+}
+
+#btnLogout i {
+    color:#2B1C32;
+}
+
+#btnLogout:hover i {
+    color: #C4B454;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+body {
+    background-color: #2B1C32;
+}
+
+.content {
+    color: #C4B454;
+    width: 100vw;
+    margin: 70px 0 0;
+}
+
+.content h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #C4B454;
+}
+
+.content p {
+    font-size: 25px;
+    text-align: center;
+    color: #C4B454;
+}
+
+.content h3{
+    font-size: 30px;
+    text-align: center;
+    color: #C4B454;
+}
+
+.card-section {
+    margin: 40px 0 0;
+    height: 110px;
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.player-card {
+    width: 75px;
+    height: 95px;
+    border: solid #a29754 5px;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.player-card i {
+    color: #C4B454;
+}
+.card{
+    display: flex; 
+    flex-direction: row;
+    background-color: #2B1C32;
+    justify-content: center;
+}
+.card1 {
+    width: 800px;
+    height:500px;
+    margin: 20px;
+    padding: 20px;
+    border: solid #a29754 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #2B1C32;
+    
+}
+.card2 {
+    width: 500px;
+    height:500px;
+    margin: 20px;
+    padding: 20px;
+    border: solid #a29754 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #2B1C32;
+    
+}
+
+.card-title{
+    color: #C4B454;
+    font-size:30px;
+    
+}
+
+/* .container.logged-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+.form-inline .row{
+    position: relative;
+    left: 18vw;
+    text-align: center;
+    justify-content: center;
+    /* width: 300%; */
+}
+.form-control {
+    border: solid #C4B454 2px;
+    color: #C4B454;
+}
+#btnStartGame {
+    color: #2B1C32;
+    border: solid #C4B454 3px;
+    background-color: #C4B454;
+}
+
+#btnStartGame:hover {
+    background: #2B1C32;
+    color: #C4B454;
+    border: solid #FFFFFF 3px;  
+}
+
+#btnJoin-x {
+    color: #2B1C32;
+    border: solid #C4B454 3px;
+    background-color: #C4B454;
+}
+
+#btnJoin-x:hover {
+background: #2B1C32;
+color: #C4B454;
+border: solid #FFFFFF 3px;
+}
+
+#btnCancel-x {
+    color: #C4B454;
+    border: solid #C4B454 3px;
+}
+
+#btnCancel-x:hover {
+background: #C4B454;
+color: #2B1C32;
+border: solid #FFFFFF 3px;
+}
+
+#btnJoin-o {
+    color: #2B1C32;
+    border: solid #C4B454 3px;
+    background-color: #C4B454;
+}
+
+#btnJoin-o:hover {
+background: #2B1C32;
+color: #C4B454;
+border: solid #FFFFFF 3px;
+}
+
+#btnCancel-o {
+    color: #C4B454;
+    border: solid #C4B454 3px;
+}
+
+#btnCancel-o:hover {
+background: #C4B454;
+color: #2B1C32;
+border: solid #FFFFFF 3px;
+}
+
+#hydro{
+    color: rgb(41, 66, 255);
+    font-size:4rem;
+}
+#pyro{
+    color: red;
+    font-size:4rem;
+}
+#dendro{
+    color: green;
+    font-size:4rem;
+}
+#animo{
+    color: yellow;
+    font-size:3.5rem;
+}
+
+
+
